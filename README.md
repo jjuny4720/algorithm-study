@@ -29,7 +29,7 @@
 $ git clone https://github.com/Jejunu-Com-Edu/algorithm-study.git
 ```
 
-1. 브랜치를 생성합니다 (본인 닉네임으로 브랜치 이름을 설정합니다.)
+3. 브랜치를 생성합니다 (본인 닉네임으로 브랜치 이름을 설정합니다.)
 
 ```bash
 $ git branch <branchname>
@@ -38,7 +38,7 @@ $ git branch <branchname>
 $ git branch ksg0605
 ```
 
-3. 생성한 브랜치로 이동합니다.
+4. 생성한 브랜치로 이동합니다.
 
 ```bash
 $ git checkout <branchname>
@@ -47,7 +47,7 @@ $ git checkout <branchname>
 $ git checkout ksg0605
 ```
 
-4. 생성한 브랜치에 작성한 내용을 커밋 및 푸시합니다.
+5. 생성한 브랜치에 작성한 내용을 커밋 및 푸시합니다.
 
 ```bash
 $ git add -A
@@ -55,5 +55,5 @@ $ git commit -m 'commit message'
 $ git push -u origin <branchname>
 ```
 
-5. 푸시가 잘 되었는지 확인하고 원본 레파지토리에 풀리퀘스트를 요청합니다.
+6. 푸시가 잘 되었는지 확인하고 원본 레파지토리에 풀리퀘스트를 요청합니다.
    ![pullrequest](img/스크린샷%202022-03-29%20오후%202.12.33.png)
