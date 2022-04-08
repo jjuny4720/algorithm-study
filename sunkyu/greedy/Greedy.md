@@ -103,6 +103,9 @@ https://programmers.co.kr/learn/courses/30/lessons/42862?language=python3
 예제 #2
 3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
 
+**예상 시간복잡도**
+n개의 리스트를 탐색해야 할 것이므로 **O(n)** 이 나올 것으로 예상된다.
+
 ```python
 def solution(n, lost, reserve):
     set_lost = set(lost) - set(reserve)
@@ -133,3 +136,6 @@ def solution(n, lost, reserve):
 - a라는 변수를 할당하여 **lost+1** 값이 set_reserve 리스트에 있는지 확인하였고, 있다면 set_reserve 리스트에서 제거하는 방법으로 여러번 체육복을 빌려주는 경우를 배제하였다.
 - 차선으로 b라는 변수를 할당하였고 **lost-1** 값이 set_reserve 리스트에 있는지 확인하였고, 마찬가지로 set_reserve 리스트에서 제거해주었다.
 - 이 두가지 경우의 수 모두에 해당하지 않는 경우 체육복을 빌릴 수 없다는 의미이므로 n에서 1을 빼 주었다.
+- 시간복잡도는 반복문에서 set_lost를 모두 탐색하는 비용 O(set_lost) +  
+  조건문에서 set_reserve를 탐색하는 비용 O(set_reserve) 이므로 **O(set_lost + set_reserve)**임을 알 수 있다.
+- 결과적으로 예상했던 O(n)보다 저렴하거나 같은 비용의 알고리즘임을 알 수 있다.
