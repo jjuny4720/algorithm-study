@@ -29,7 +29,7 @@
 $ git clone https://github.com/Jejunu-Com-Edu/algorithm-study.git
 ```
 
-3. 브랜치를 생성합니다 (본인 닉네임으로 브랜치 이름을 설정합니다.)
+1. 브랜치를 생성합니다 (본인 닉네임으로 브랜치 이름을 설정합니다.)
 
 ```bash
 $ git branch <branchname>
