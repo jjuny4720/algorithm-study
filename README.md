@@ -19,6 +19,18 @@
 - 예제 문제 풀이는 모든 언어로 가능하며, 본인이 자신있는 언어를 선택합니다.
 - Python, Java, Javascript의 경우, jupyter notebook을 사용가능합니다.
 
+## Schedule
+
+1. Greedy (22.04.09)
+2. 구현
+3. DFS / BFS
+4. 정렬
+5. DP
+6. Binary Search
+7. 최단경로
+8. 그래프
+9. 기출문제 풀이
+
 ## How To Contribute
 
 1. 레파지토리를 fork합니다.
