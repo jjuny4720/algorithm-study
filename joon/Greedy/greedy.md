@@ -62,43 +62,50 @@ Math.floor를 사용하는 이유는 다른언어와 달리 자바스크립트�
 
 ## 문제
 
- 프로그래머스 level1 - 콜라츠 추측
+ 프로그래머스 level1 - 체육복 문제
    
     
-![ex](../../img/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202022-04-09%20%EC%98%A4%EC%A0%84%202.28.19.png)
+![ex](../../img/스크린샷%2022-04-09%오전%11.47.49.png)
 
 <br/>
 
 ## 문제 풀이
 ```javascript
-function solution(num) {
-    let count = 0;
-    while(num > 1) {
-        if(count >= 500){
-            return -1 
-        }else{ 
-            if(num % 2 == 0){
-                num = num /2 
-            }else{
-                num = num*3 + 1 
-            } 
-        count ++ 
-        } 
+function solution(n, lost, reserve) {
+    
+    const clothes = Array(n).fill(1);
+    
+    lost.map(function(lost){
+        clothes[lost-1] = 0});
+    
+    reserve.map(function(reserve){
+        clothes[reserve-1] += 1});
+    
+    for(let i=0; i<n; i++){
+        if(clothes[i] == 0 && clothes[i-1] === 2){
+            clothes[i] = 1;
+            clothes[i-1] = 1;
+        }
+        else if(clothes[i] === 0 && clothes[i+1] === 2){
+            clothes[i] = 1;
+            clothes[i+1] = 1;
+        }
     }
-    return count;
+    return clothes.filter(c => c > 0).length;
 }
 ```
-- 문제를 보면 필요한 로직은 총 3가지이다.
-  - 짝수, 홀수 구분 후 연산
-  - 누적된 값을 반복 연산
-  - 500번 반복 후 -1 반환
-<br/>
-
-1. num이 1이 될때 까지 while문 반복
-2. 만약 count가 500이 넘는다면 -1 return
-3. 500을 넘지 않는다면 2로 나누어 짝수 판별
-4. 짝수가 아니면 3을 곱하고 1을 더해 count 증가
 
 <br/>
 
-![해결](../../img/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202022-04-09%20%EC%98%A4%EC%A0%84%202.27.14.png)
+ - 여벌의 체육복을 가져온 학생이 도난당했을 경우
+ - 도난된 학생이 여벌의 체육복을 가져온 학생에게 빌렸을경우
+ - 전체학생 수 - 체육복을 도난당하고 여벌을 못받은 학생 수
+
+ ## 문제풀이
+  - 학생들이 갖고 있는 체육복 개수를 1로 설정
+  - 도난당한 학생들은 0, 여벌이 있으면 1을 더함
+  - 여벌을 갖고 온 학생이 도난을 당했으면 체육복 1개를 갖고 있게됨
+  - 체육복이 0개인 학생의 앞, 뒤 학생이 체육복 2개를 갖고 있을 경우 빌려와서 1개가 됨
+  - 배열에서 1개 이상의 체육복을 갖고 있는 학생의 수를 구해야함
+
+![해결](../../img/스크린샷%2022-04-09%오후%1.17.41.png)
