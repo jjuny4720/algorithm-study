@@ -12,16 +12,9 @@ def stringReorder():
     answer.sort()
     answer.append(num)
     #print(num)
-<<<<<<< HEAD
     print(answer)
     
     return answer
-=======
-    result = ' '.join(map(str, answer))
-    print(result)
-    
-    return result
->>>>>>> 82ff3d0fb9a231da22bbfda3e901e9828530b111
 
 # test case
 # K1KA5CB7 → ABCKK13
