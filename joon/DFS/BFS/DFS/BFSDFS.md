@@ -229,25 +229,9 @@ n개의 음이 아닌 정수들이 있습니다. 이 정수들을 순서를 바�
 
 ```js
 function solution(numbers, target) {
-  let answer = 0;
-
-  function dfs(depth, sum) {
-    if (depth === numbers.length) {
-      if (sum === target) {
-        answer += 1;
-      }
-      return;
-    }
-    dfs(depth + 1, sum + numbers[depth]);
-    dfs(depth + 1, sum - numbers[depth]);
-  }
-
-  dfs(0, 0);
-
-  return answer;
+    var answer = 0;
+    return answer;
 }
 ```
 1. DFS 
 2. 트리라고 생각해서 트리의 깊이랑 Numbers 배열의 길이랑 비교해서 같으면 target값이랑 같은지 확인
-3. 트리모양이라고 생각해서 왼쪽은 +, 오른쪽은 -
-4. 트리의 깊이가 numbers배열과 같아지면 결과 값이 target이랑 비교
