@@ -1,6 +1,3 @@
-from sympy import comp
-
-
 def solution(participant, completion):
     answer = set(participant) - set(completion)
     answer = "".join(answer)
