@@ -15,3 +15,4 @@ function solution(participant, completion) {
       }
   }
 }
+//각각을 sort하고 for문으로 비교 한후 false면 바로 종료
