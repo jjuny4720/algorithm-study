@@ -1,5 +1,3 @@
-//progresses: 배포되어야 하는 순서대로 작업의 진도가 담은 배열
-//speeds : 각 작업의 개발 속도
 //뒤에 있는 기능이 앞에 있는 기능보다 먼저 개발되더라도 앞에 있는 기능이 배포될 때 함께 배포되기 때문에 Queue를 활용
 function solution(progresses, speeds) {
   // 각 배포마다 배포되는 기능의 수 배열
