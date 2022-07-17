@@ -21,7 +21,7 @@ function solution(answers) {
   }
   
   // 다 돌면 가장 많이 맞힌 사람(math.max)을 배열에 담고  score의 길이만큼 돌아서 max값과 같은 값의 +1를 해서 return
-  const max = Math.max(score[0], score[1], score[2]);
+  const max = Math.max(...score);
   //배열 요소 순차 비교
   for (let j = 0; j < score.length; j++) {
       if (score[j] === max) {
